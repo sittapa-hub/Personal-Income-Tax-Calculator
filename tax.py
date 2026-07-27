@@ -1,6 +1,8 @@
 net_income = int(input("กรอกเงินได้สุทธิ : "))
 remain_net = net_income
 tax = []
+total_tax  = 0
+
 
 
 #ขั้นที่ 1
@@ -70,8 +72,23 @@ if net_income > 5000000:
    tax.append(remain_net * (35/100))
 else:
     tax.append(0)
-    
+ 
+#รวมภาษี
+for money in tax:
+    total_tax += money
+
+#รายได้หลังหักภาษี
+after_tax_income = net_income - total_tax
+
+#คำนวณอัตราภาษีที่แท้จริง
+effective_tax_rate = (total_tax / net_income) * 100
+
 
 print(remain_net)
 for i in range(len(tax)):
-    print(i,tax[i])
+    print(i+1,format((tax[i]),",.0f"))
+
+
+print(f"{total_tax:,.0f}")
+print(format(after_tax_income, ",.0f"))
+print(format(effective_tax_rate, ".2f"),"%")
