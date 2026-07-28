@@ -4,7 +4,6 @@ tax = []
 total_tax  = 0
 
 
-
 #ขั้นที่ 1
 if  net_income >= 150000: 
     remain_net = net_income - 150000
@@ -17,7 +16,7 @@ else:
 if net_income >= 300000: 
     remain_net = remain_net - 150000
     tax.append(150000 * (5/100))
-else:
+else: # Error
     tax.append(remain_net * (5/100))
     remain_net -= remain_net
     
@@ -84,11 +83,69 @@ after_tax_income = net_income - total_tax
 effective_tax_rate = (total_tax / net_income) * 100
 
 
-print(remain_net)
-for i in range(len(tax)):
-    print(i+1,format((tax[i]),",.0f"))
+#แสดงรายลละเอียดภาษี
+
+#ขั้นที่ 1
+if  net_income > 150000:
+    print("0 - 150,000    ",format(tax[0],",.0f"),"บาท")
+else:
+    print(f"0 - {format(net_income,",")}    {format(tax[0],",.0f")} บาท")
 
 
-print(f"{total_tax:,.0f}")
-print(format(after_tax_income, ",.0f"))
-print(format(effective_tax_rate, ".2f"),"%")
+#ขั้นที่ 2
+if tax[1] != 0:
+    if net_income > 300000:
+        print("150,001 - 300,000    ",format(tax[1],",.0f"),"บาท")
+    else:
+        print(f"150,001 - {format(net_income,",")}    {format(tax[1],",.0f")} บาท")
+    
+
+
+#ขั้นที่ 3
+if tax[2] != 0:
+    if net_income > 500000:
+        print("300,001 - 500,000    ",format(tax[2],",.0f"),"บาท")
+    else:
+        print(f"300,001 - {format(net_income,",")}    {format(tax[2],",.0f")} บาท")
+    
+
+#ขั้นที่ 4
+if tax[3] != 0:
+    if net_income > 750000:
+        print("500,001 - 750,000    ",format(tax[3],",.0f"),"บาท")
+    else:
+        print(f"500,001 - {format(net_income,",")}    {format(tax[3],",.0f")} บาท")
+    
+
+#ขั้นที่ 5
+if tax[4] != 0:
+    if net_income > 1000000:
+        print("750,001 - 1,000,000    ",format(tax[4],",.0f"),"บาท")
+    else:
+        print(f"750,001 - {format(net_income,",")}    {format(tax[4],",.0f")} บาท")
+    
+
+#ขั้นที่ 6
+if tax[5] != 0:
+    if net_income > 2000000:
+        print("1,000,001 - 2,000,000    ",format(tax[5],",.0f"),"บาท") 
+    else:
+        print(f"1,000,001 - {format(net_income,",")}    {format(tax[5],",.0f")} บาท")
+    
+
+#ขั้นที่ 7
+if tax[6] != 0:
+    if net_income > 5000000:
+        print("2,000,001 - 5,000,000    ",format(tax[6],",.0f"),"บาท")
+    else:
+        print(f"2,000,001 - {format(net_income,",")}    {format(tax[6],",.0f")} บาท")
+
+
+#ขั้นที่ 8    
+if tax[7] != 0:
+    print("มากกว่า 5,000,000    ",format(tax[7],",.0f"),"บาท")
+
+
+print("ภาษีรวม   ",format(total_tax,",.0f"),"บาท")
+print("รายได้หลังหักภาษี    ",format(after_tax_income, ",.0f"),"บาท")
+print("Effective Tax Rate =",format(effective_tax_rate, ".2f"),"%")
