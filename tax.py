@@ -94,69 +94,69 @@ print(f"{'รายละเอียดภาษี':^55}")
 print("=" * 55)
 #ขั้นที่ 1
 if  net_income > 150000:
-    print(f"{'0 - 150,000':<30}: {format(tax[0],',.0f')} บาท")
+    print(f"{'0 - 150,000':<30}:  {format(tax[0],',.0f')} บาท")
 else:
-    print(f"0 - {format(net_income,','):<20}: {format(tax[0],',.0f')} บาท")
+    print(f"0 - {format(net_income,','):<20}:  {format(tax[0],',.0f')} บาท")
 
 
 #ขั้นที่ 2
 if tax[1] != 0:
     if net_income > 300000:
-        print(f"{'150,001 - 300,000':<30}: {format(tax[1],',.0f')} บาท")
+        print(f"{'150,001 - 300,000':<30}:  {format(tax[1],',.0f')} บาท")
     else:
-        print(f"150,001 - {format(net_income,','):<20}: {format(tax[1],',.0f')} บาท")
+        print(f"150,001 - {format(net_income,','):<20}:  {format(tax[1],',.0f')} บาท")
     
 
 
 #ขั้นที่ 3
 if tax[2] != 0:
     if net_income > 500000:
-        print(f"{'300,001 - 500,000':<30}: {format(tax[2],',.0f')} บาท")
+        print(f"{'300,001 - 500,000':<30}:  {format(tax[2],',.0f')} บาท")
     else:
-        print(f"300,001 - {format(net_income,','):<20}: {format(tax[2],',.0f')} บาท")
+        print(f"300,001 - {format(net_income,','):<20}:  {format(tax[2],',.0f')} บาท")
     
 
 #ขั้นที่ 4
 if tax[3] != 0:
     if net_income > 750000:
-        print(f"{'500,001 - 750,000':<30}: {format(tax[3],',.0f')} บาท")
+        print(f"{'500,001 - 750,000':<30}:  {format(tax[3],',.0f')} บาท")
 
     else:
-        print(f"500,001 - {format(net_income,','):<20}: {format(tax[3],',.0f')} บาท")
+        print(f"500,001 - {format(net_income,','):<20}:  {format(tax[3],',.0f')} บาท")
 
 
 #ขั้นที่ 5
 if tax[4] != 0:
     if net_income > 1000000:
-        print(f"{'750,001 - 1,000,000':<30}: {format(tax[4],',.0f')} บาท")
+        print(f"{'750,001 - 1,000,000':<30}:  {format(tax[4],',.0f')} บาท")
 
     else:
-        print(f"750,001 - {format(net_income,','):<20}: {format(tax[4],',.0f')} บาท")
+        print(f"750,001 - {format(net_income,','):<20}:  {format(tax[4],',.0f')} บาท")
 
     
 
 #ขั้นที่ 6
 if tax[5] != 0:
     if net_income > 2000000:
-        print(f"{'1,000,001 - 2,000,000':<30}: {format(tax[5],',.0f')} บาท")
+        print(f"{'1,000,001 - 2,000,000':<30}:  {format(tax[5],',.0f')} บาท")
     else:
-        print(f"1,000,001 - {format(net_income,','):<20}: {format(tax[5],',.0f')} บาท")
+        print(f"1,000,001 - {format(net_income,','):<20}:  {format(tax[5],',.0f')} บาท")
     
 
 #ขั้นที่ 7
 if tax[6] != 0:
     if net_income > 5000000:
-        print(f"{'2,000,001 - 5,000,000':<30}: {format(tax[6],',.0f')} บาท")
+        print(f"{'2,000,001 - 5,000,000':<30}:  {format(tax[6],',.0f')} บาท")
     else:
-        print(f"2,000,001 - {format(net_income,','):<20}: {format(tax[6],',.0f')} บาท")
+        print(f"2,000,001 - {format(net_income,','):<20}:  {format(tax[6],',.0f')} บาท")
 
 
 #ขั้นที่ 8    
 if tax[7] != 0:
-    print(f"{'มากกว่า 5,000,000':<31}: {format(tax[7],',.0f'):} บาท")
+    print(f"{'มากกว่า 5,000,000':<31}:  {format(tax[7],',.0f'):} บาท")
 
 print("=" * 55)
-print(f"{'ภาษีรวม':<25}: {format(total_tax,',.0f')} บาท")
-print(f"{'รายได้หลังหักภาษี':<28}: {format(after_tax_income,',.0f')} บาท")
-print(f"{'Effective Tax Rate':<24}: {format(effective_tax_rate,',.2f')} %")
+print(f"{'ภาษีรวม':<31}:  {format(total_tax,',.0f')} บาท")
+print(f"{'รายได้หลังหักภาษี':<34}:  {format(after_tax_income,',.0f')} บาท")
+print(f"{'Effective Tax Rate':<30}:  {format(effective_tax_rate,',.2f')} %")
 print("=" * 55)
