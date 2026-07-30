@@ -165,6 +165,8 @@ def show_tax_detail(tax, total_tax, after_tax_income, effective_tax_rate):
 #รับค่าเงินได้สุทธิจากผู้ใช้
 net_income = int(input("กรอกเงินได้สุทธิ : "))
 
+#กำหนดค่าตัวแปรโดยเรียกใช้ฟันก์ชัน calculate_tax()
 tax, total_tax, after_tax_income, effective_tax_rate = calculate_tax(net_income)
 
+#เรียกใช้ฟันก์ชัน show_tax_detail()
 show_tax_detail(tax,total_tax,after_tax_income,effective_tax_rate)
