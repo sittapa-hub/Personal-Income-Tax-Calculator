@@ -1,6 +1,3 @@
-#รับค่าเงินได้สุทธิจากผู้ใช้
-net_income = int(input("กรอกเงินได้สุทธิ : "))
-
 #ฟังก์ชันคำนวณภาษี
 def calculate_tax(net_income):
     tax = []
@@ -165,6 +162,9 @@ def show_tax_detail(tax, total_tax, after_tax_income, effective_tax_rate):
     print(f"{'Effective Tax Rate':<30}:  {format(effective_tax_rate,',.2f')} %")
     print("=" * 55)
 
+#รับค่าเงินได้สุทธิจากผู้ใช้
+net_income = int(input("กรอกเงินได้สุทธิ : "))
 
 tax, total_tax, after_tax_income, effective_tax_rate = calculate_tax(net_income)
+
 show_tax_detail(tax,total_tax,after_tax_income,effective_tax_rate)
